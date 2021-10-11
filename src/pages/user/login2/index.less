@@ -9,248 +9,280 @@
 // //   -moz-box-sizing: border-box;
 // //   -webkit-box-sizing: border-box;
 // // }
-html, body{
-  padding: 0;
+html,
+body {
   margin: 0;
+  padding: 0;
 }
-.login{
+.login {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh;
   background: url(./img/banner.jpeg) repeat;
-  position: relative;
 }
-.bg1{
-  background: #347ebc;
-  width: 100%;
-  height: 237px;
-  opacity: 0.6;
+.bg1 {
   position: absolute;
   top: calc((100vh - 237px) / 2);
-}
-.gyl{
-  width: 510px;
+  width: 100%;
   height: 237px;
-  color: #FFFFFF;
-  font-size: 72px;
+  background: #347ebc;
+  opacity: 0.6;
+}
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.tips {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-size: 35px;
+  font-family: STSong;
+  text-align: center;
+  user-select: none;
+}
+.copyright {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 0 1.5rem 0;
+  color: #ffffff;
+  font-family: STSong;
+  text-align: center;
+  user-select: none;
+}
+.gyl {
   position: absolute;
-  padding-top: 20px;
-  left: 15%;
   top: 0px;
   bottom: 0px;
+  left: 15%;
+  width: 510px;
+  height: 237px;
   margin: auto;
+  padding-top: 20px;
+  color: #ffffff;
+  font-size: 72px;
 }
-.gy2{
-  color: #fff;
+.gy2 {
+  margin-top: 10px;
   margin-left: 6px;
+  color: #fff;
   font-size: 18px;
   text-align: center;
-  margin-top: 10px;
 }
-.box{
-  width: 355px;
-  position: absolute;
+.box {
+  // position: absolute;
   top: 0px;
   right: 10%;
   bottom: 0px;
-  margin: auto;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 355px;
+  margin: auto;
 }
-.box1{
+.box1 {
   width: 100%;
-  background: #fff;
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
   padding: 10%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
 }
-.header{
+.header {
   width: 100%;
   height: 35px;
   color: #347ebc;
   font-size: 1.5rem;
   text-align: center;
 }
-.item{
-  width: 100%;
-  display: flex;
-  margin: 10px 0px;
-  height: 40px;
+.item {
   position: relative;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0px;
 }
 
 .item input {
-  border-bottom: 0.0625rem solid #347ebc;
-  height: 2.5625rem;
   width: 100%;
+  height: 2.5625rem;
   text-indent: 1.125rem;
+  border-bottom: 0.0625rem solid #347ebc;
   outline: none;
 }
 
 .userLabel {
-  border-bottom: 1px solid #347ebc;
-  height: 41px;
   width: 60px;
+  height: 41px;
   line-height: 41px;
+  border-bottom: 1px solid #347ebc;
 }
 
-.remember{
+.remember {
   display: flex;
-  margin: 10px 0px;
-  height: 40px;
   align-items: center;
-}
-.remember_box{
-  width: 200px;
-  display: flex;
   height: 40px;
+  margin: 10px 0px;
+}
+.remember_box {
+  display: flex;
   align-items: center;
   justify-content: flex-start;
-}
-.remember .text{
-  margin-left: 10px;
-  width: 100px;
-}
-.login .btn {
-  border: none;
-  color: #fff;
-  width: 100%;
-  text-align: center;
-  background-color: #347ebc;
-  text-indent: 0rem;
+  width: 200px;
   height: 40px;
 }
-.avatar{
+.remember .text {
+  width: 100px;
+  margin-left: 10px;
+}
+.login .btn {
   width: 100%;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  text-indent: 0rem;
+  background-color: #347ebc;
+  border: none;
+}
+.avatar {
   display: flex;
   justify-content: center;
+  width: 100%;
   height: 150px;
-  .avatarx{
+  .avatarx {
     width: 100px;
     height: 100px;
     border: 1px solid lightgray;
     border-radius: 50%;
   }
 }
-.code{
-  width: 85px;
-  height: 35px;
+.code {
   position: absolute;
+  right: 1.2rem;
   display: flex;
   justify-content: space-around;
-  right: 1.2rem;
+  width: 85px;
+  height: 35px;
 }
-.code_img{
+.code_img {
   width: 80px;
   height: 35px;
 }
-@media (min-width:0px) and (max-width:1400px) {
-  .box{
+@media (min-width: 0px) and (max-width: 1400px) {
+  .box {
     width: 340px;
   }
-  .gyl{
-   width: 400px;
+  .gyl {
+    width: 400px;
   }
 }
 
-@media (min-width:400px) and (max-width:800px) {
-  .box{
-    right: 20%;
-    width: 320px;
+@media (min-width: 400px) and (max-width: 800px) {
+  .box {
     top: 0px;
+    right: 20%;
     right: 0px;
     bottom: 0px;
-    margin: auto;
     left: 0px;
+    width: 320px;
+    margin: auto;
   }
-   .gyl{
+  .gyl {
     position: absolute;
     top: 40px;
-    font-size: 72px;
+    right: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
     height: 200px;
     margin: 0 auto;
-    left: 0;
-    right: 0;
-   }
-   .gy2{
-    width: 100%;
-    padding: 0 50px;
+    font-size: 72px;
     text-align: center;
-    font-size: 13px;
+  }
+  .gy2 {
+    width: 100%;
     height: 60px;
-   }
+    padding: 0 50px;
+    font-size: 13px;
+    text-align: center;
+  }
 }
 
-@media (min-width:330px) and (max-width:420px) {
-  .box{
-    right: 20%;
-    width: 300px;
+@media (min-width: 330px) and (max-width: 420px) {
+  .box {
     top: 20px;
+    right: 20%;
     right: 0px;
     bottom: 0px;
-    margin: auto;
     left: 0px;
+    width: 300px;
+    margin: auto;
   }
-  .gyl{
+  .gyl {
     position: absolute;
     top: 6%;
-    font-size: 36px;
+    right: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
     height: 200px;
     margin: 0 auto;
-    left: 0;
-    right: 0;
-   }
-   .gy2{
-    width: 100%;
-    padding: 0 50px;
+    font-size: 36px;
     text-align: center;
-    font-size: 13px;
+  }
+  .gy2 {
+    width: 100%;
     height: 60px;
+    padding: 0 50px;
     color: rgba(0, 0, 0, 0);
-   }
+    font-size: 13px;
+    text-align: center;
+  }
 }
-@media (min-width:0px) and (max-width:330px) {
-  .box{
-    right: 20%;
-    width: 280px;
+@media (min-width: 0px) and (max-width: 330px) {
+  .box {
     top: 20px;
+    right: 20%;
     right: 0px;
     bottom: 0px;
-    margin: auto;
     left: 0px;
+    width: 280px;
+    margin: auto;
   }
-  .gyl{
+  .gyl {
     position: absolute;
     top: 10%;
-    font-size: 36px;
+    right: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
     height: 200px;
     margin: 0 auto;
-    left: 0;
-    right: 0;
-   }
-   .gy2{
-    width: 100%;
-    padding: 0 50px;
+    font-size: 36px;
     text-align: center;
-    font-size: 13px;
+  }
+  .gy2 {
+    width: 100%;
     height: 60px;
+    padding: 0 50px;
     color: rgba(0, 0, 0, 0);
-   }
+    font-size: 13px;
+    text-align: center;
+  }
 }
 
 @media (max-height: 600px) {
-  .gyl{
-    top: 0;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+  .gyl {
     position: absolute;
-   }
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
 }

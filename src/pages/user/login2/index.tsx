@@ -119,7 +119,7 @@ const Login: React.FC<Props> = props => {
           </div>
           <div className={style.box}>
             <div className={style.box1} >
-              <div style={{ width: '100%', height: '30px' }}></div>
+              <div style={{ width: '100%', height: '30px' }} />
               <div className={style.avatar}>
                 <Avatar size="small" className={style.avatarx} src={information.avatar || 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3273016457,3482023254&fm=26&gp=0.jpg'} alt="avatar" />
               </div>
@@ -146,7 +146,7 @@ const Login: React.FC<Props> = props => {
                 name="登录"
                 value="登录"
               />
-              <div style={{ width: '100%', height: '30px' }}></div>
+              <div style={{ width: '100%', height: '30px' }} />
               <input
                 onClick={() => {
                   localStorage.setItem('x-access-token', '');
@@ -164,7 +164,7 @@ const Login: React.FC<Props> = props => {
                 name="切换账号"
                 value="切换账号"
               />
-              <div style={{ width: '100%', height: '30px' }}></div>
+              <div style={{ width: '100%', height: '30px' }} />
             </div>
           </div>
         </div>
@@ -175,14 +175,21 @@ const Login: React.FC<Props> = props => {
   }
   const renderLogin = () => (
     <div className={style.login}>
-
-      <div className={style.bg1} />
+      <div className={style.loginBox}>
+<p></p>
+       
+     {/*  <div className={style.bg1} />
       <div className={style.gyl}>
         物联网平台
         <div className={style.gy2}>MQTT TCP CoAP HTTP , 多消息协议适配 , 可视化规则引擎
         </div>
-      </div>
+      </div> */}
       {/* style={{ height: enable ? '387px' : '330px' }} */}
+
+      <div className={style.loginBlock}>
+      <p className={style.tips}>
+        anyinlink 物联网平台
+        </p>
       <div className={style.box}>
         <div className={style.box1} >
           <div className={style.header}>用户登录</div>
@@ -217,7 +224,7 @@ const Login: React.FC<Props> = props => {
                 type="text"
               />
               <div className={style.code} onClick={() => { getCodeImg(); }}><img src={captchaImg} className={style.code_img} /></div>
-            </div> : <div></div>
+            </div> : <div />
           }
 
 
@@ -245,7 +252,12 @@ const Login: React.FC<Props> = props => {
           />
         </div>
       </div>
-    </div>
+      </div>
+      <p className={style.copyright}>
+         &copy; 中铁十一局四公司智能工装院
+      </p>
+      </div>
+      </div>
   )
   // return isReady ? renderLogin() : <Spin spinning={isReady} />;
   return isReady ? Login() : <Spin spinning={isReady} />;
